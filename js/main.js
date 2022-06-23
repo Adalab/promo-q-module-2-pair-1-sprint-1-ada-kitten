@@ -3,8 +3,6 @@
 const ohNo = document.querySelector('.js-new-form');
 ohNo.classList.remove("colapsed");
 
-
-
 const kittenOne = `<li class="card">
 <article>
   <img
@@ -49,5 +47,5 @@ const kittenThree = `<li class="card">
 </li>`;
 
 
-const ohYeah = document.queryselector(".js-list");
-ohYeah.innerHTML = kittenOne;
+const ohYeah = document.querySelector(".js-list");
+ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
