@@ -1,10 +1,14 @@
 'use strict';
 
+const kittenDesc2=  'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle! y cariñoso';
+
+const kittenDesc3=  'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle! y cariñoso';
+
 const kittenImage = 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg';
 const kittenName = 'Anastacio';
 
-const kittenDesc =
-  'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!';
+const kittenDesc1=
+  'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!y cariñoso';
 const kittenRace = 'British Shorthair';
 
 const kittenImage2 = 'https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg';
@@ -38,10 +42,11 @@ const kittenOne = `<li class="card">
 alt="gatito"/>
 <h3 class="card_title">${kittenName.toUpperCase()}</h3>
 <h4 class="card_race">${kittenRace}</h4>
-<p class="card_description">${kittenDesc}
+<p class="card_description">${kittenDesc1}
 </p>
 </article>
 </li>`;
+
 
 // const kittenTwo = `<li class="card">
 // <img
@@ -66,7 +71,7 @@ const kittenTwo = `<li class="card">
 <h3 class="card_title">${kittenName2.toUpperCase()}</h3>
 <h4 class="card_race">${kittenRace}</h4>
 <p class="card_description">
-${kittenDesc}
+${kittenDesc2}
 </p>
 </li>`;
 
@@ -94,10 +99,32 @@ const kittenThree = `<li class="card">
 <h3 class="card_title">${kittenName3.toUpperCase()}</h3>
 <h4 class="card_race">${kittenRace}</h4>
 <p class="card_description">
-${kittenDesc}
+${kittenDesc3}
 </p>
 </li>`;
 
 
 const ohYeah = document.querySelector(".js-list");
 ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
+
+
+const input_search_desc = document.querySelector('.js_in_search_desc');
+
+input_search_desc.value = 'cariñoso';
+
+const descrSearchText = input_search_desc.value;
+
+
+
+if( kittenDesc1.includes(descrSearchText) ) {
+  kittenOne.classList.add("hidden");
+  }
+  
+//  if( kittenDesc2.includes(descrSearchText) ) {
+  //Completa el código
+//  }
+  
+ // if( kittenDesc3.includes(descrSearchText) ) {
+  //Completa el código
+ // }
+     
