@@ -101,3 +101,6 @@ ${kittenDesc}
 
 const ohYeah = document.querySelector(".js-list");
 ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
+
+
+// hello, what's going on
