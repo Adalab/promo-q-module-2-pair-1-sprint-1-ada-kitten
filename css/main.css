@@ -102,11 +102,6 @@ li {
   padding: 20px;
 }
 
-.cardview {
-}
-
-.listview {
-}
 
 .data .list {
   display: flex;
@@ -217,6 +212,6 @@ li {
 }
 
 
-.hidden{
+.hidden {
   display: none;
 }
