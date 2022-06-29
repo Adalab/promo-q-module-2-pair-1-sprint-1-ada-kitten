@@ -127,29 +127,46 @@ const descrSearchText = input_search_desc.value;
  // if( kittenDesc3.includes(descrSearchText) ) {
   //Completa el código
  // }
-     
 
- const plus = document.querySelector(".js_plus");
- const nav = document.querySelector(".js_nav");
- nav.classList.add("hidden");
- plus.addEventListener("click", (event) => {
-  event.preventDefault();
-  nav.classList.remove("colapsed");
-  nav.classList.remove("hidden")});
-
-
- const buttonAdd =document.queryselector(".js-btn-add");
+ const buttonAdd =document.querySelector(".js-btn-add");
  const inputDesc = document.querySelector('.js-input-desc');
  const inputPhoto = document.querySelector('.js-input-photo');
  const inputName = document.querySelector('.js-input-name');
  const labelMesageError = document.querySelector('.js-label-error');
 
- buttonAdd.addEventListener("click", (event) => {const valueDesc = inputDesc.value;
+ buttonAdd.addEventListener("click", (event) => {
+  event.preventDefault();
+  const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 
 if (valueDesc === '' || valuePhoto === '' || valueName === '') {
  labelMesageError.innerHTML="chica que dise";
+
 } else {
-  //completa el código
+  labelMesageError.innerHTML="ole ole los caracoles";
 } })
+
+const plus = document.querySelector(".js_plus");
+const nav = document.querySelector(".js_nav");
+nav.classList.add("colapsed");
+
+function showNewCatForm() {
+  nav.classList.remove('colapsed');
+}
+
+function hideNewCatForm() {
+  nav.classList.add('colapsed');
+}
+
+plus.addEventListener("click", (event) => {
+event.preventDefault();
+if (nav.classList.contains('colapsed')) {
+  showNewCatForm();
+}
+else {
+  hideNewCatForm();
+}
+});
+
+
