@@ -108,6 +108,7 @@ const ohYeah = document.querySelector(".js-list");
 ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
 
 
+
 const input_search_desc = document.querySelector('.js_in_search_desc');
 
 input_search_desc.value = 'cariñoso';
@@ -170,3 +171,26 @@ else {
 });
 
 
+
+function renderKitten(url, desc, name, race) {
+//const urlJaja = url.value;
+//const descJaja = desc.value;
+//const nameJaja = name.value;
+//const raceJaja = race.value;
+
+ return `<li class="card">
+ <img
+   class="card_img"
+   src=${url}
+   alt="gatito"
+ />
+ <h3 class="card_title">${name.toUpperCase()}</h3>
+ <h4 class="card_race">${race}</h4>
+ <p class="card_description">
+ ${desc}
+ </p>
+ </li>`;
+}
+// console.log(renderKitten("f","g","g","g"));
+
+ohYeah.innerHTML += renderKitten("https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg", "doraemon", "gato cósmico", "vivan las comillas");
