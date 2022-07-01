@@ -135,9 +135,97 @@ const descrSearchText = input_search_desc.value;
  const inputName = document.querySelector('.js-input-name');
  const labelMesageError = document.querySelector('.js-label-error');
 
- buttonAdd.addEventListener("click", (event) => {
+//  buttonAdd.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const valueDesc = inputDesc.value;
+// const valuePhoto = inputPhoto.value;
+// const valueName = inputName.value;
+
+// if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+//  labelMesageError.innerHTML="chica que dise";
+
+// } else {
+//   labelMesageError.innerHTML="ole ole los caracoles";
+// } })
+
+// const plus = document.querySelector(".js_plus");
+// const nav = document.querySelector(".js_nav");
+// nav.classList.add("colapsed");
+
+// function showNewCatForm() {
+//   nav.classList.remove('colapsed');
+// }
+
+// function hideNewCatForm() {
+//   nav.classList.add('colapsed');
+// }
+
+// plus.addEventListener("click", (event) => {
+// event.preventDefault();
+// if (nav.classList.contains('colapsed')) {
+//   showNewCatForm();
+// }
+// else {
+//   hideNewCatForm();
+// }
+// });
+
+
+
+// function renderKitten(url, desc, name, race) {
+// //const urlJaja = url.value;
+// //const descJaja = desc.value;
+// //const nameJaja = name.value;
+// //const raceJaja = race.value;
+
+//  return `<li class="card">
+//  <img
+//    class="card_img"
+//    src=${url}
+//    alt="gatito"
+//  />
+//  <h3 class="card_title">${name.toUpperCase()}</h3>
+//  <h4 class="card_race">${race}</h4>
+//  <p class="card_description">
+//  ${desc}
+//  </p>
+//  </li>`;
+// }
+// console.log(renderKitten("f","g","g","g"));
+
+// ohYeah.innerHTML += renderKitten("https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg", "doraemon", "gato cósmico", "vivan las comillas");
+
+const kittenData_1 = {
+  image: 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg',
+  name: 'Anastacio',
+  desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+  race: 'British Shorthair',
+};
+
+function renderKitten() {
+return `<li class="card">
+      <img
+        class="card_img"
+        src=${kittenData_1.image}
+        alt="gatito"
+      />
+      <h3 class="card_title">${kittenData_1.name.toUpperCase()}</h3>
+      <h4 class="card_race">${kittenData_1.race}</h4>
+      <p class="card_description">
+      ${kittenData_1.desc}
+      </p>
+      </li>`;
+}
+
+
+ohYeah.innerHTML = renderKitten(kittenData_1);
+
+buttonAdd.addEventListener('click', addNewKitten);
+
+function addNewKitten(event) {
   event.preventDefault();
-  const valueDesc = inputDesc.value;
+
+const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 
@@ -146,7 +234,7 @@ if (valueDesc === '' || valuePhoto === '' || valueName === '') {
 
 } else {
   labelMesageError.innerHTML="ole ole los caracoles";
-} })
+} }
 
 const plus = document.querySelector(".js_plus");
 const nav = document.querySelector(".js_nav");
@@ -171,26 +259,18 @@ else {
 });
 
 
+const inputRace = document.querySelector(".js-input-race");
 
-function renderKitten(url, desc, name, race) {
-//const urlJaja = url.value;
-//const descJaja = desc.value;
-//const nameJaja = name.value;
-//const raceJaja = race.value;
+const cancelNewKitten = (event) => {
+  event.preventDefault();
+  const nav = document.querySelector(".js_nav");
+  nav.classList.add("colapsed");
 
- return `<li class="card">
- <img
-   class="card_img"
-   src=${url}
-   alt="gatito"
- />
- <h3 class="card_title">${name.toUpperCase()}</h3>
- <h4 class="card_race">${race}</h4>
- <p class="card_description">
- ${desc}
- </p>
- </li>`;
-}
-// console.log(renderKitten("f","g","g","g"));
+  inputDesc.value = "";
+  inputName.value = "";
+  inputPhoto.value = "";
+  inputRace.value = "";
+};
 
-ohYeah.innerHTML += renderKitten("https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg", "doraemon", "gato cósmico", "vivan las comillas");
+const buttonCancelForm = document.querySelector('.js-btn-cancel');
+buttonCancelForm.addEventListener('click', cancelNewKitten);
