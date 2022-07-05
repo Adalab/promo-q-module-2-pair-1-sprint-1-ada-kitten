@@ -62,11 +62,9 @@ ${kittenDesc3}
 </li>`;
 
 const ohYeah = document.querySelector('.js-list');
-ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
+// ohYeah.innerHTML = kittenOne + kittenTwo + kittenThree;
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
-
-input_search_desc.value = 'cariñoso';
 
 const descrSearchText = input_search_desc.value;
 
@@ -88,46 +86,7 @@ const inputPhoto = document.querySelector('.js-input-photo');
 const inputName = document.querySelector('.js-input-name');
 const labelMesageError = document.querySelector('.js-label-error');
 
-//  buttonAdd.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const valueDesc = inputDesc.value;
-// const valuePhoto = inputPhoto.value;
-// const valueName = inputName.value;
-
-// if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-//  labelMesageError.innerHTML="chica que dise";
-
-// } else {
-//   labelMesageError.innerHTML="ole ole los caracoles";
-// } })
-
-// const plus = document.querySelector(".js_plus");
-// const nav = document.querySelector(".js_nav");
-// nav.classList.add("colapsed");
-
-// function showNewCatForm() {
-//   nav.classList.remove('colapsed');
-// }
-
-// function hideNewCatForm() {
-//   nav.classList.add('colapsed');
-// }
-
-// plus.addEventListener("click", (event) => {
-// event.preventDefault();
-// if (nav.classList.contains('colapsed')) {
-//   showNewCatForm();
-// }
-// else {
-//   hideNewCatForm();
-// }
-// });
-
 // function renderKitten(url, desc, name, race) {
-// //const urlJaja = url.value;
-// //const descJaja = desc.value;
-// //const nameJaja = name.value;
-// //const raceJaja = race.value;
 
 //  return `<li class="card">
 //  <img
@@ -144,31 +103,17 @@ const labelMesageError = document.querySelector('.js-label-error');
 // }
 // console.log(renderKitten("f","g","g","g"));
 
-// ohYeah.innerHTML += renderKitten("https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg", "doraemon", "gato cósmico", "vivan las comillas");
+// const kittenData_1 = {
+//   image: 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg',
+//   name: 'Anastacio',
+//   desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+//   race: 'British Shorthair',
+// };
 
-const kittenData_1 = {
-  image: 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg',
-  name: 'Anastacio',
-  desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
-  race: 'British Shorthair',
-};
-
-function renderKitten() {
-  return `<li class="card">
-      <img
-        class="card_img"
-        src=${kittenData_1.image}
-        alt="gatito"
-      />
-      <h3 class="card_title">${kittenData_1.name.toUpperCase()}</h3>
-      <h4 class="card_race">${kittenData_1.race}</h4>
-      <p class="card_description">
-      ${kittenData_1.desc}
-      </p>
-      </li>`;
-}
-
-ohYeah.innerHTML = renderKitten(kittenData_1);
+// ohYeah.innerHTML = renderKitten(kittenData_1);
+// ohYeah.innerHTML += renderKitten(kittenData_2);
+// ohYeah.innerHTML += renderKitten(kittenData_3);
+// ohYeah.innerHTML += renderKitten(kittenData_4);
 
 buttonAdd.addEventListener('click', addNewKitten);
 
@@ -222,3 +167,151 @@ const cancelNewKitten = (event) => {
 
 const buttonCancelForm = document.querySelector('.js-btn-cancel');
 buttonCancelForm.addEventListener('click', cancelNewKitten);
+
+// Objeto con la información del segundo gatito
+/* 
+const kittenData_2 = {  image: 'https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg',
+name: 'Fiona',
+desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+race: 'British Shorthair',
+  ... 
+};*/
+
+// Objeto con la información del tercer gatito
+// const kittenData_3 =  {  image: 'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg',
+// name: 'Cielo',
+// desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+// race: 'British Shorthair',
+/* ... */
+// };
+
+// const buttonSearch = document.querySelector('.js-button-search');
+// buttonSearch.addEventListener('click', filterKitten);
+
+// const filterKitten = (event) => {
+//   console.log('Socorro soy un pez');
+//   if (kittenDesc1.includes(descrSearchText)) {
+//     listElement.innerHTML = renderKitten(kittenData_1);
+//   }
+//   if (kittenDesc2.includes(descrSearchText)) {
+//     listElement.innerHTML = renderKitten(kittenData_2);
+//   }
+//   if (kittenDesc3.includes(descrSearchText)) {
+//     listElement.innerHTML = renderKitten(kittenData_3);
+//   }
+// };
+
+// Objeto con la información del primer gatito
+// const kittenDatas_1 = {
+//   image: 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg',
+//   name: 'Anastacio',
+//   desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+//   race: 'British Shorthair',
+// };
+
+// const kittenData_2 = {
+//   image:
+//     'https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg',
+//   name: 'Fiona',
+//   desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+//   race: 'British Shorthair',
+// };
+
+// const kittenData_3 = {
+//   image:
+//     'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg',
+//   name: 'Cielo',
+//   desc: 'Lalala, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
+//   race: 'British Shorthair',
+// };
+
+// const kittenData_4 = {
+//   image:
+//     'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+//   name: 'Doraemon',
+//   desc: 'Vivan las comillas',
+//   race: 'Gato cósmico',
+// };
+
+// Lista con la información de todos los gatitos
+
+// const kittenDataList = [kittenDatas_1 = {
+//   image:
+//     'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+//   name: 'Doraemon',
+//   desc: 'Vivan las comillas',
+//   race: 'Gato cósmico',
+// },
+// kittenData_2 = {
+//   image:
+//     'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+//   name: 'Doraemon',
+//   desc: 'Vivan las comillas',
+//   race: 'Gato cósmico',
+// },
+// kittenData_3 = {
+//   image:
+//     'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+//   name: 'Doraemon',
+//   desc: 'Vivan las comillas',
+//   race: 'Gato cósmico',
+// },
+// kittenData_4 = {
+//   image:
+//     'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+//   name: 'Doraemon',
+//   desc: 'Vivan las comillas',
+//   race: 'Gato cósmico',
+// },
+// ];
+
+
+let kittenData_4 = {
+  image:
+    'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+  name: 'Doraemon',
+  desc: 'Vivan las comillas',
+  race: 'Gato cósmico',
+}
+
+let kittenData_1 = {
+  image:
+    'https://imagenes.elpais.com/resizer/m7Nr2xlpf9b2_RceuCFJwWdF1iQ=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/UQAPXGM3DF4SUVUFBT5VERJ25A.jpg',
+  name: 'Doraemon',
+  desc: 'Vivan las comillas',
+  race: 'Gato cósmico',
+}
+
+const kittenDataList = [kittenData_1, kittenData_4
+];
+
+function renderKitten(kittenData) {
+  return `<li class="card">
+      <img
+        class="card_img"
+        src=${kittenData.image}
+        alt="gatito"
+      />
+      <h3 class="card_title">${kittenData.name}</h3>
+      <h4 class="card_race">${kittenData.race}</h4>
+      <p class="card_description">
+      ${kittenData.desc}
+      </p>
+      </li>`;
+}
+
+function renderKittenList(kittenDataList) {
+  //Iteramos sobre el listado de gatitos
+  console.log('Juju');
+
+  for (const kitten of kittenDataList) {
+    ohYeah.innerHTML += renderKitten(kitten);
+  }
+
+  //Y por cada iteración pintamos un gatito.
+  //utilizando la función renderKitten(kittenItem)
+}
+
+renderKittenList(kittenDataList);
+
+
